@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        startNewRound()
+        startNewGame()
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,17 +33,30 @@ class ViewController: UIViewController {
 
     @IBAction func showAlert(_ sender: Any) {
         let difference = abs(targetValue - currentValue)
-        let points = 100 - difference
+        var points = 100 - difference
+        
+        let title: String
+        if difference == 0 {
+            title = "完美"
+            points += 100
+        } else if difference < 5 {
+            title = "非常不错"
+            points += 50
+        } else if difference < 10 {
+            title = "还不赖"
+        } else {
+            title = "再加把劲"
+        }
         
         score += points
         
-        let message = "You scored \(points) points"
+        let message = "你获得了 \(points) 分"
         
-        let alert = UIAlertController(title: "Hello, World",
+        let alert = UIAlertController(title: title,
                                       message: message,
                                       preferredStyle: .alert)
         
-        let action = UIAlertAction(title: "OK",
+        let action = UIAlertAction(title: "好",
                                    style: .default,
                                    handler: nil)
         
@@ -68,6 +81,12 @@ class ViewController: UIViewController {
         targetLabel.text = String(targetValue)
         scoreLabel.text = String(score)
         roundLabel.text = String(round)
+    }
+    
+    @IBAction func startNewGame() {
+        score = 0
+        round = 0
+        startNewRound()
     }
 }
 

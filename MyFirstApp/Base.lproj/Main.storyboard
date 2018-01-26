@@ -65,6 +65,9 @@
                                 <rect key="frame" x="180" y="261" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="重来"/>
+                                <connections>
+                                    <action selector="startNewGame" destination="BYZ-38-t0r" eventType="touchUpInside" id="EOW-W5-fw7"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="分数：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxH-e6-wAj">
                                 <rect key="frame" x="269" y="266" width="52" height="21"/>
