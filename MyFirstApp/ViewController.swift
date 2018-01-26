@@ -23,6 +23,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        slider.setThumbImage(#imageLiteral(resourceName: "SliderThumb-Normal"), for: .normal)
+        slider.setThumbImage(#imageLiteral(resourceName: "SliderThumb-Highlighted"), for: .highlighted)
+        
+        slider.setMinimumTrackImage(#imageLiteral(resourceName: "TrackLeft"), for: .normal)
+        slider.setMaximumTrackImage(#imageLiteral(resourceName: "TrackRight"), for: .normal)
+        
         startNewGame()
     }
 
