@@ -150,25 +150,22 @@
                                     <action selector="close" destination="mlA-Rv-y6L" eventType="touchUpInside" id="f0Y-95-ucp"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tgM-Ut-vOP">
-                                <rect key="frame" x="20" y="20" width="696" height="267"/>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BTS-Ij-L2u">
+                                <rect key="frame" x="20" y="20" width="696" height="281"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">*** Bull’s Eye ***
-
-Welcome to the awesome game of Bull’s Eye where you can win points and
-fame by dragging a slider.
-
-Your goal is to place the slider as close as possible to the target
-value. The closer you are, the more points you score. Enjoy!</string>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="UGs-mg-FbG"/>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="BTS-Ij-L2u" id="Fuu-jV-IIp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pBo-rv-Wtf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
